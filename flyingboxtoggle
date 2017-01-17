@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Mover Test</title>
+	<style type="text/css">
+
+		.smallsquare {
+			width: 200px;
+			height: 200px;
+			display: block;
+			background-color: red;
+			left: 40px;
+			position: relative;
+			transform:translateY(40px);
+			transition-property: all;
+			transition-duration: 1s;
+
+		}
+
+			.secondstate {
+			width: 10px;
+			height: 10px;
+			display: block;
+			background-color: blue;
+			left: 700px;
+			position: relative;
+			transform:translateY(40px);
+			transition-property: all;
+			transition-duration: 1s;
+
+		}
+
+		.margin {
+			margin: 10px;
+		}
+
+		.movebutton {
+			color: black;
+
+		}
+
+	</style>
+
+</head>
+
+
+
+<body>
+
+<div class="smallsquare redbackground">
+	<p></p>
+</div>
+
+<button class="movebutton margin">Move the box</button>
+
+<script type="text/javascript">
+
+	var boxclass = document.querySelector(".smallsquare")
+
+	document.querySelector(".movebutton").addEventListener("click", function() {
+		boxclass.classList.toggle("secondstate");
+	});
+  
+ </script>
+
+</body>
+</html>
