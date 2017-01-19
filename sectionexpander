@@ -24,34 +24,65 @@ h1 {
 	margin: 0;
 }
 
+img {
+    
+    
+}
+
 .section1 {
 	border: 1px solid black;
 	transition-property: all;
 	transition-duration: 1s;
+	z-index: 4;
+}
+
+.section2 {
+	border: 1px solid black;
+	transition-property: all;
+	transition-duration: 1s;
+	z-index: 4;
 }
 
 .section1:hover {
 	background-color: blue;
 }
 
+.section2:hover {
+	background-color: blue;
+}
+
 .section1tree {
 	border: 1px solid red;
-	height: 300px;
+	height: 100% 300px;
 	position: relative;
 	transition-property: all;
-	transition-duration: 1s;
+	transition-duration: 2s;
+}
+
+.section2tree {
+	border: 1px solid red;
+	height: 100% 300px;
+	position: relative;
+	transition-property: all;
+	transition-duration: 2s;
 }
 .displaynone {
 	height: 0px;
 	transition-property: all;
-	transition-duration: 1s;
-}
-
-.displaynocontent {
+	transition-duration: 2s;
 	display: none;
 }
 
+.displaynocontent {
+  
+}
+
 .sectioncontent {
+	transition: opacity .5s ease-in-out;
+	transition-duration: ;
+	transition-delay: .2s;
+	z-index: 3;
+
 
 }
 
@@ -74,18 +105,38 @@ h1 {
 </div>
 
 <div class="container section1tree">
-	<div class="row">
-		<p class="sectioncontent">Here is some random content to show and hide</p>
+	<div class="row sectioncontent">
+		<p class="col-lg-9">Here is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHow and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHow and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hide</p>
+		<img src="http://1.bp.blogspot.com/_RoVaOkSJ30s/TM1RQoHTuPI/AAAAAAAAACo/EF5JP1s2X_I/s1600/media+logo.png"  width="280">
+	</div>
+</div>
+
+<div class="container section2">
+	<h1>Section Heading</h1>
+	
+</div>
+
+<div class="container section2tree">
+	<div class="row sectioncontent">
+		<p class="col-lg-9">Here is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHow and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHow and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hideHere is some random content to show and hide</p>
+		<img src="http://1.bp.blogspot.com/_RoVaOkSJ30s/TM1RQoHTuPI/AAAAAAAAACo/EF5JP1s2X_I/s1600/media+logo.png"  width="280">
 	</div>
 </div>
 
 <script type="text/javascript">
 
 var section1tree = document.querySelector(".section1tree")
+var section2tree = document.querySelector(".section2tree")
 var content = document.querySelector(".sectioncontent")
 
 document.querySelector(".section1").addEventListener("click", function(){
 	section1tree.classList.toggle("displaynone");
+	content.classList.toggle("displaynocontent");
+
+});
+
+document.querySelector(".section2").addEventListener("click", function(){
+	section2tree.classList.toggle("displaynone");
 	content.classList.toggle("displaynocontent");
 
 });
